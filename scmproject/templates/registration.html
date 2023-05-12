@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ekart-Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Registration Form</h3>
+        <div class="form-container">
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="input-name">
+                    <i class="fa fa-user lock"></i>
+                    {{form.username}}
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-envelope email"></i>
+                        {{form.email}}
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                        {{form.password1}}
+                </div>
+
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                        {{form.password2}}
+                </div>
+                <div class="input-name">
+                    <input type="checkbox" class="check-button">
+                    <label class="check">I accept terms and conditions</label>
+                </div>
+                <div class="input-name">
+                    <button class="btn">Register</button>
+                </div>
+                {{form.errors}}
+                <div>
+                    Already Have a account? <a href="{%url 'login' %}">Login</a>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

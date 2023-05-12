@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekart</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!-- header section starts  -->
+
+  <header>
+    <a href="#" class="logo"><span><b>Ekart</b></span></a>
+
+    <input type="checkbox" id="menu-bar" />
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+        <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#review">review</a>
+      <a href="#contact">contact</a>
+      <a href="{%url 'login' %}">login</a>
+    </nav>
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3><span>Welcome to Ekart!</span></h3>
+      <p>
+        We pride ourselves on providing a wide range of high-quality products at competitive prices, coupled with excellent customer service to ensure your complete satisfaction. We strive to create a hassle-free shopping experience, from easy navigation to secure checkout, and we are always here to assist you with any questions or concerns you may have.
+      </p>
+      <a href="{%url 'login' %}" class="btn">Get Started</a>
+    </div>
+
+    <div class="image">
+      <img src="{% static 'images/home-img.png' %}" alt="" />
+    </div>
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- about section starts  -->
+
+  <section class="about" id="about">
+    <h1 class="heading">about us</h1>
+
+    <div class="column">
+      <div class="image">
+        <img src="{% static 'images/macbook.png' %}" alt="" />
+      </div>
+
+      <div class="content">
+        <!-- <h3>Easy And Perfect Solution For Your Business App</h3> -->
+        <p>
+          Our story began with a passion for ecommerce and the desire to create a one-stop-shop for all your shopping needs. With years of experience in the industry, we have honed our skills and knowledge to offer you the best products and services available.
+        </p>
+        <p>
+          Our team comprises dedicated professionals who work tirelessly to ensure that our customers have access to the latest trends, styles, and innovations. We constantly research and evaluate the products we offer to ensure they meet our high standards of quality and affordability.
+        </p>
+        <p>
+          At our ecommerce website, we believe that the customer comes first. We understand that shopping online can sometimes be overwhelming, which is why we have created an easy-to-use website that is both user-friendly and secure. We take great pride in providing a hassle-free shopping experience, from browsing to checkout.
+        </p>
+        <p>
+          We are honored to serve you and look forward to being your go-to ecommerce destination. Thank you for choosing our ecommerce website, and we hope you enjoy your shopping experience with us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- about section ends -->
+
+  <!-- features section starts  -->
+
+  <section class="features" id="services">
+    <h1 class="heading">services</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="{% static 'images/f-icon1.png' %}" alt="" />
+        <h3>Fast and Reliable Shipping</h3>
+        <p>
+          We offer fast and reliable shipping services to ensure your products arrive in a timely manner. We work with top-notch shipping carriers to make sure your orders are delivered to your doorstep as quickly as possible.
+        </p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'images/f-icon2.png' %}" alt="" />
+        <h3>Personalized Customer Service</h3>
+        <p>
+          Our dedicated customer service team is always available to help you with any concerns you may have. We understand that shopping online can sometimes be overwhelming, so we are here to guide.
+        </p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'images/f-icon3.png' %}" alt="" />
+        <h3>Secure Payment Options</h3>
+        <p>
+          We take your security seriously, which is why we offer secure payment options to ensure your personal information is protected. Our payment gateway is designed to provide you with a safe experience.
+        </p>
+        <a href="#" class="btn">read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- features section ends -->
+
+
+  <!-- review section starts  -->
+
+  <section class="review" id="review">
+    <h1 class="heading">people's review</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="{% static 'images/pic1.png' %}" alt="" />
+          <h3>Dheeraj</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="comment">
+            Ekart has exceeded my expectations in terms of quality and customer service. I recently purchased a product from them and was blown away by the excellent packaging and fast shipping.
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="{% static 'images/pic2.png' %}" alt="" />
+          <h3>Baba Afrid</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="comment">
+            I was hesitant to purchase from an online store, but Ekart made it a breeze. Their website was easy to navigate, and I received my product in no time. I highly recommend them!
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-quote-right"></i>
+        <div class="user">
+          <img src="{% static 'images/pic3.png' %}" alt="" />
+          <h3>Hari Krishna</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="comment">
+            Great selection of products at affordable prices. The customer service team was responsive and helpful when I had a question about my order. I will be shopping with Ekart again.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- review section ends -->
+
+  <!-- contact section starts  -->
+
+  <section class="contact" id="contact">
+    <div class="image">
+      <img src="{% static 'images/contact-img.png' %}" alt="" />
+    </div>
+
+    <form action="">
+      <h1 class="heading">contact us</h1>
+
+      <div class="inputBox">
+        <input type="text" required />
+        <label>name</label>
+      </div>
+
+      <div class="inputBox">
+        <input type="email" required />
+        <label>email</label>
+      </div>
+
+      <div class="inputBox">
+        <input type="number" required />
+        <label>phone</label>
+      </div>
+
+      <div class="inputBox">
+        <textarea required name="" id="" cols="30" rows="10"></textarea>
+        <label>message</label>
+      </div>
+
+      <input type="submit" class="btn" value="send message" />
+    </form>
+  </section>
+
+  <!-- contact section edns -->
+
+  <!-- footer section starts  -->
+
+  <div class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>about us</h3>
+        <p>
+          Our Team Comprises Dedicated Professionals Who Work Tirelessly To Ensure That Our Customers Have Access To The Latest Trends, Styles, And Innovations. We Constantly Research And Evaluate The Products We Offer To Ensure They Meet Our High Standards Of Quality And Affordability.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="#">instagram</a>
+        <a href="#">pinterest</a>
+        <a href="#">twitter</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <div class="info">
+          <i class="fas fa-phone"></i>
+          <p>
+            +91 8919175824 <br />
+            +91 9502276062
+          </p>
+        </div>
+        <div class="info">
+          <i class="fas fa-envelope"></i>
+          <p>
+            babaafrid7@gmail.com <br />
+            babaafrid2@gmail.com
+          </p>
+        </div>
+        <div class="info">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Vijayawada, india - 522302</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer section ends -->
+</body>
+{{redirect_to_login_immediately}}
+</html>

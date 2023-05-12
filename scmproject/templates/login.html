@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ekart-Login</title>
+</head>
+<body>
+    <div class="container1">
+        <h3>Login Form</h3>
+        <div class="form-container">
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="input-name">
+                    <i class="fa fa-user lock"></i>
+                    <input type="text" placeholder="Username" class="text-name" name="username" required>
+
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                    <input type="password" placeholder="Password" class="text-name" name="password" required>
+
+                </div>
+                <div class="input-name">
+                    <button class="btn">Login</button>
+                </div>
+                {% for message in messages %}
+                <p id="messages">{{message}}</p>
+                {% endfor %}
+                <div>
+                    Don't Have an account? <a href="{% url 'register'%}">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
